@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ejemplo con eventos touch </title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="zepto.min.js"> </script>
+		<script type="text/javascript" src="touch.js"> </script>
+		<script type="text/javascript">
+		  $(function(){ 
+			var i = $("#i1");
+			i.on('swipeRight', function() { i.attr('src','minion2.png');});
+			i.on('swipeLeft',  function() { i.attr('src','minion.png');});
+			i.on('swipeUp',    function() { i.attr('src','elsa.jpg');});
+			i.on('swipeDown',  function() { i.attr('src','elsa2.jpg');});
+			i.on('longTap',    function() { i.attr('src','enamorado.jpg');});
+			i.on('doubleTap',  function() { i.attr('width','400');i.attr('heigth','400');});
+		 });
+		</script>
+	</head>
+
+	<body>
+		<h2>Prueba de eventos touch</h2>
+		<img src="minion.png" width="300" heigth="300" id="i1"/> 
+	</body>
+</html>
